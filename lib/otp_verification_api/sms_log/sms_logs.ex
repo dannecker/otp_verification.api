@@ -57,7 +57,6 @@ defmodule OtpVerification.SMSLogs do
   end
 
   defp do_update_sms_status(sms, status) do
-
     update_query = change(sms, [gateway_status: status])
     update_query =
       if status == "Delivered" do
